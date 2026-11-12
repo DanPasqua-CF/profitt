@@ -1,0 +1,14 @@
+{
+  "name": "contractor-wireframe",
+  "version": "1.0.0",
+  "private": true,
+  "description": "HTML/CSS/TypeScript wireframe for an industrial contractor website",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "serve": "npx --yes http-server -c-1 -p 8080 ."
+  },
+  "devDependencies": {
+    "typescript": "^6.0.2"
+  }
+}
