@@ -8,19 +8,31 @@ sections common to the four industrial-contractor sites we compared. All copy is
 npm install      # installs TypeScript
 npm run build    # compiles src/main.ts -> dist/main.js
 ```
-Then open `index.html` in a browser (it also works when opened straight from a file), or run `npm run serve` and
-visit http://localhost:8080.
+Then run `npm run serve` and visit http://localhost:8080 (recommended — gives clean `/about/` style URLs), or open
+`index.html` straight from disk; a small script rewrites folder links to `…/index.html` so navigation still works.
 
 ## Files
 | Path | Purpose |
 |---|---|
-| `index.html` | Page structure and all sections |
+| `index.html` | Home page (overview of every section) |
+| `about/`, `services/`, `industries/`, `safety/`, `projects/`, `news/`, `careers/`, `contact/` | One folder per page, each with its own `index.html` (served at `/about/`, etc.) |
 | `css/styles.css` | Mobile-first styles and breakpoints |
 | `src/main.ts` | TypeScript behaviour (source) |
 | `dist/main.js` | Compiled JavaScript loaded by the page |
 | `screenshots/` | Desktop, tablet and mobile previews |
 
-## Sections (top to bottom)
+All pages share one stylesheet and one script. Nearly every style and behaviour (header, nav, footer, cards, form) is
+shared, and each script feature no-ops when its elements aren't on the page, so per-page CSS/TS files would be
+near-empty and add extra requests. If a page grows substantial unique styles, add e.g. `about/about.css` beside it.
+
+The header and footer are duplicated in each HTML file — update menu changes in all nine.
+
+## Submenu anchors
+- **About** (`about/`): `#history`, `#leadership`, `#locations`, `#affiliations`
+- **Services** (`services/`): `#pipe-fabrication`, `#industrial-construction`, `#maintenance`, `#engineering`,
+  `#electrical`, `#technical-solutions`
+
+## Home page sections (top to bottom)
 Utility bar (phone/email/social) · Sticky header with dropdown navigation + "Get a Quote" · Hero · Stats strip ·
 Services grid · Why us / About · Industries served · Safety · Projects (filterable) · Certifications / affiliations ·
 News · Careers call-to-action · Contact form + locations/map · Footer (links, social, legal).

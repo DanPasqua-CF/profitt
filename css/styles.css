@@ -416,6 +416,37 @@ button, input, select, textarea {
   text-decoration: underline;
 }
 
+/* Parent items (About, Services): link to the page + separate submenu toggle */
+.submenu-head {
+  display: flex;
+  align-items: stretch;
+}
+
+.submenu-link {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  min-height: 52px;
+  padding: 0 4px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #44494c;
+}
+
+.submenu-head .submenu-toggle {
+  flex: none;
+  width: 52px;
+  justify-content: center;
+  padding: 0;
+}
+
+.primary-nav [aria-current="page"]:not(.btn) {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+}
+
 .primary-nav__cta {
   border-bottom: 0 !important;
   padding-top: 20px;
@@ -435,6 +466,12 @@ button, input, select, textarea {
 .hero { background: var(--c-surface); padding: 40px 0 48px; border-bottom: 1px solid var(--c-line); }
 .hero__inner { display: grid; gap: 32px; }
 .hero__media { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: contain; object-position: center; border-radius: var(--radius); border: 1px solid var(--c-line); background: var(--c-surface-2); }
+
+/* ---------- Interior page hero ---------- */
+.page-hero { background: var(--c-surface); padding: 40px 0; border-bottom: 1px solid var(--c-line); }
+.page-hero .lead { max-width: 680px; }
+.page-hero__jump ul { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.page-hero__jump .chip { text-decoration: none; color: inherit; display: inline-flex; align-items: center; }
 
 /* ---------- Stats ---------- */
 .stats { background: var(--c-dark); color: var(--c-dark-text); padding: 32px 0; }
@@ -682,7 +719,7 @@ body.show-labels .site-header[data-label] { position: sticky; }
   .submenu-toggle {
     min-height: 44px;
     padding: 0 12px;
-    font-size: .95rem;
+    font-size: 1.05rem;
     border-radius: var(--radius);
   }
 
@@ -713,6 +750,16 @@ body.show-labels .site-header[data-label] { position: sticky; }
     box-shadow: var(--shadow);
   }
 
+  /* Invisible bridge over the 4px gap so hover isn't lost moving into the dropdown */
+  .submenu::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    height: 10px;
+  }
+
   /* Open on hover for mouse users, and via JS (click/keyboard) for everyone */
   .has-submenu:hover > .submenu,
   .has-submenu:focus-within > .submenu {
@@ -727,6 +774,28 @@ body.show-labels .site-header[data-label] { position: sticky; }
   .submenu a:hover {
     background: var(--c-surface);
     text-decoration: none;
+  }
+
+  .submenu-link {
+    min-height: 44px;
+    padding: 0 4px 0 12px;
+    font-size: 1.05rem;
+    border-radius: var(--radius) 0 0 var(--radius);
+  }
+
+  .submenu-head .submenu-toggle {
+    width: 28px;
+    min-height: 44px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+  }
+
+  .submenu-head .submenu-toggle::after {
+    margin-left: 0;
+  }
+
+  .submenu-head:hover .submenu-link,
+  .submenu-head:hover .submenu-toggle {
+    background: var(--c-surface);
   }
 
   .primary-nav__cta {
@@ -793,6 +862,14 @@ body.show-labels .site-header[data-label] { position: sticky; }
   .primary-nav__list > li > a:not(.btn),
   .submenu-toggle {
     padding: 0 14px;
+  }
+
+  .submenu-head .submenu-toggle {
+    padding: 0;
+  }
+
+  .submenu-link {
+    padding: 0 4px 0 14px;
   }
 }
 

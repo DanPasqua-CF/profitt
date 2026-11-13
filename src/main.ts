@@ -22,6 +22,8 @@ function initNavigation(): void {
   if (!header || !toggle || !nav) return;
 
   const submenuToggles = $$<HTMLButtonElement>(".submenu-toggle", nav);
+  const submenuOf = (btn: HTMLButtonElement): HTMLElement | null =>
+    btn.closest(".has-submenu")?.querySelector<HTMLElement>(".submenu") ?? null;
 
   /** Position the drawer directly below the header, wherever it currently sits. */
   const syncDrawerTop = (): void => {
@@ -42,7 +44,7 @@ function initNavigation(): void {
     submenuToggles.forEach((btn) => {
       if (btn === except) return;
       btn.setAttribute("aria-expanded", "false");
-      btn.nextElementSibling?.classList.remove("is-open");
+      submenuOf(btn)?.classList.remove("is-open");
     });
   };
 
@@ -54,11 +56,11 @@ function initNavigation(): void {
       const open = btn.getAttribute("aria-expanded") !== "true";
       closeSubmenus(btn);
       btn.setAttribute("aria-expanded", String(open));
-      btn.nextElementSibling?.classList.toggle("is-open", open);
+      submenuOf(btn)?.classList.toggle("is-open", open);
     });
   });
 
-  // Close the drawer after choosing a link (in-page anchors).
+  // Close the drawer after choosing a link (also covers same-page anchors).
   $$<HTMLAnchorElement>("a", nav).forEach((link) =>
     link.addEventListener("click", () => {
       if (!DESKTOP_QUERY.matches) setMenu(false);
@@ -249,7 +251,25 @@ function initHelpers(): void {
   if (year) year.textContent = String(new Date().getFullYear());
 }
 
+/* ------------------------------------------------------------------
+ * Pages live in folders (about/index.html) and are linked as "about/".
+ * Web servers resolve that to index.html; when the site is opened
+ * straight from disk (file://) the browser would show a folder listing,
+ * so point those links at index.html explicitly.
+ * ------------------------------------------------------------------ */
+function initFileProtocolLinks(): void {
+  if (location.protocol !== "file:") return;
+  $$<HTMLAnchorElement>("a[href]").forEach((link) => {
+    const url = new URL(link.href);
+    if (url.protocol === "file:" && url.pathname.endsWith("/")) {
+      url.pathname += "index.html";
+      link.href = url.href;
+    }
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  initFileProtocolLinks();
   initNavigation();
   initFooterAccordions();
   initProjectFilters();

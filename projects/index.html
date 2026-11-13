@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects | PRO-FITT</title>
+  <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../dist/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== Header / primary navigation ===== -->
+  <header class="site-header" data-label="Header + navigation">
+    <div class="container site-header__inner">
+      <a href="../" class="logo" aria-label="Home">
+        <img src="../img/profitt.jpeg" alt="PRO-FITT logo" class="logo__mark logo__image">
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <ul class="primary-nav__list">
+          <li class="has-submenu">
+            <div class="submenu-head">
+              <a href="../about/" class="submenu-link">About</a>
+              <button class="submenu-toggle" type="button" aria-expanded="false" aria-label="About submenu"></button>
+            </div>
+            <ul class="submenu">
+              <li><a href="../about/#history">History</a></li>
+              <li><a href="../about/#leadership">Leadership</a></li>
+              <li><a href="../about/#locations">Locations</a></li>
+              <li><a href="../about/#affiliations">Affiliations</a></li>
+            </ul>
+          </li>
+          <li class="has-submenu">
+            <div class="submenu-head">
+              <a href="../services/" class="submenu-link">Services</a>
+              <button class="submenu-toggle" type="button" aria-expanded="false" aria-label="Services submenu"></button>
+            </div>
+            <ul class="submenu">
+              <li><a href="../services/#pipe-fabrication">Pipe Fabrication</a></li>
+              <li><a href="../services/#industrial-construction">Industrial Construction</a></li>
+              <li><a href="../services/#maintenance">Maintenance</a></li>
+              <li><a href="../services/#engineering">Engineering</a></li>
+              <li><a href="../services/#electrical">Electrical</a></li>
+              <li><a href="../services/#technical-solutions">Technical Solutions</a></li>
+            </ul>
+          </li>
+          <li><a href="../industries/">Industries</a></li>
+          <li><a href="../safety/">Safety</a></li>
+          <li><a href="../projects/" aria-current="page">Projects</a></li>
+          <li><a href="../news/">News</a></li>
+          <li><a href="../careers/">Careers</a></li>
+          <li class="primary-nav__cta"><a href="../contact/" class="btn btn--primary">Get a Quote</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===== Page hero ===== -->
+    <section class="page-hero" data-label="Page hero">
+      <div class="container">
+        <p class="eyebrow">Projects</p>
+        <h1>Lorem ipsum dolor</h1>
+        <p class="lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+      </div>
+    </section>
+
+    <!-- ===== Featured projects (filterable) ===== -->
+    <section id="projects" class="section" data-label="Projects / case studies">
+      <div class="container">
+        <header class="section__header">
+          <p class="eyebrow">Projects</p>
+          <h2>Lorem ipsum dolor</h2>
+        </header>
+        <div class="filters" role="group" aria-label="Filter projects">
+          <button type="button" class="chip is-active" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="chip" data-filter="lorem" aria-pressed="false">Lorem</button>
+          <button type="button" class="chip" data-filter="ipsum" aria-pressed="false">Ipsum</button>
+          <button type="button" class="chip" data-filter="dolor" aria-pressed="false">Dolor</button>
+        </div>
+        <div class="grid grid--3 projects">
+          <article class="card card--media" data-category="lorem">
+            <div class="placeholder placeholder--thumb" aria-hidden="true"><span>Image</span></div>
+            <div class="card__body"><span class="tag">Lorem</span><h3>Lorem ipsum dolor</h3><p>Sed ut perspiciatis unde omnis iste natus.</p></div>
+          </article>
+          <article class="card card--media" data-category="ipsum">
+            <div class="placeholder placeholder--thumb" aria-hidden="true"><span>Image</span></div>
+            <div class="card__body"><span class="tag">Ipsum</span><h3>Sit amet consectetur</h3><p>Nemo enim ipsam voluptatem quia voluptas.</p></div>
+          </article>
+          <article class="card card--media" data-category="dolor">
+            <div class="placeholder placeholder--thumb" aria-hidden="true"><span>Image</span></div>
+            <div class="card__body"><span class="tag">Dolor</span><h3>Adipiscing elit sed</h3><p>Neque porro quisquam est qui dolorem.</p></div>
+          </article>
+          <article class="card card--media" data-category="lorem">
+            <div class="placeholder placeholder--thumb" aria-hidden="true"><span>Image</span></div>
+            <div class="card__body"><span class="tag">Lorem</span><h3>Eiusmod tempor</h3><p>Ut enim ad minima veniam, quis nostrum.</p></div>
+          </article>
+          <article class="card card--media" data-category="ipsum">
+            <div class="placeholder placeholder--thumb" aria-hidden="true"><span>Image</span></div>
+            <div class="card__body"><span class="tag">Ipsum</span><h3>Incididunt ut labore</h3><p>Quis autem vel eum iure reprehenderit.</p></div>
+          </article>
+          <article class="card card--media" data-category="dolor">
+            <div class="placeholder placeholder--thumb" aria-hidden="true"><span>Image</span></div>
+            <div class="card__body"><span class="tag">Dolor</span><h3>Magna aliqua enim</h3><p>At vero eos et accusamus et iusto odio.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer" data-label="Footer">
+    <div class="container footer-grid">
+      <div class="footer-col footer-col--brand">
+        <a href="../" class="logo" aria-label="Home">
+          <img src="../img/profitt.jpeg" alt="PRO-FITT logo" class="logo__mark logo__image">
+        </a>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+        <div class="social">
+          <a href="#" aria-label="LinkedIn" class="social__icon">in</a>
+          <a href="#" aria-label="Facebook" class="social__icon">f</a>
+          <a href="#" aria-label="Instagram" class="social__icon">ig</a>
+        </div>
+      </div>
+      <nav class="footer-col" aria-label="Company">
+        <h4 class="footer-col__title"><button type="button" class="footer-toggle" aria-expanded="false">Company</button></h4>
+        <ul class="footer-col__links">
+          <li><a href="../about/">About</a></li><li><a href="../about/#history">History</a></li><li><a href="../about/#leadership">Leadership</a></li><li><a href="../careers/">Careers</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-label="Services">
+        <h4 class="footer-col__title"><button type="button" class="footer-toggle" aria-expanded="false">Services</button></h4>
+        <ul class="footer-col__links">
+          <li><a href="../services/#pipe-fabrication">Lorem ipsum</a></li><li><a href="../services/#industrial-construction">Dolor sit</a></li><li><a href="../services/#maintenance">Amet elit</a></li><li><a href="../services/#engineering">Consectetur</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col">
+        <h4 class="footer-col__title"><button type="button" class="footer-toggle" aria-expanded="false">Contact</button></h4>
+        <ul class="footer-col__links">
+          <li>0000 Lorem Ipsum St</li><li>Dolor, ST 00000</li><li><a href="tel:+10000000000">(000) 000-0000</a></li><li><a href="mailto:info@example.com">info@example.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-legal">
+      <p>© <span id="year">2026</span> Lorem Ipsum, Inc. All rights reserved.</p>
+      <ul><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms</a></li><li><a href="#">Accessibility</a></li></ul>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" aria-label="Back to top" hidden>↑</button>
+  <button type="button" class="annotate-toggle" aria-pressed="false" title="Show wireframe section labels">Labels</button>
+</body>
+</html>

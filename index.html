@@ -14,7 +14,7 @@
   <!-- ===== Header / primary navigation ===== -->
   <header class="site-header" data-label="Header + navigation">
     <div class="container site-header__inner">
-      <a href="#" class="logo" aria-label="Home">
+      <a href="./" class="logo" aria-label="Home">
         <img src="img/profitt.jpeg" alt="PRO-FITT logo" class="logo__mark logo__image">
       </a>
 
@@ -26,31 +26,37 @@
       <nav id="primary-nav" class="primary-nav" aria-label="Primary">
         <ul class="primary-nav__list">
           <li class="has-submenu">
-            <button class="submenu-toggle" type="button" aria-expanded="false">About</button>
+            <div class="submenu-head">
+              <a href="about/" class="submenu-link">About</a>
+              <button class="submenu-toggle" type="button" aria-expanded="false" aria-label="About submenu"></button>
+            </div>
             <ul class="submenu">
-              <li><a href="#about">History</a></li>
-              <li><a href="#about">Leadership</a></li>
-              <li><a href="#contact">Locations</a></li>
-              <li><a href="#certifications">Affiliations</a></li>
+              <li><a href="about/#history">History</a></li>
+              <li><a href="about/#leadership">Leadership</a></li>
+              <li><a href="about/#locations">Locations</a></li>
+              <li><a href="about/#affiliations">Affiliations</a></li>
             </ul>
           </li>
           <li class="has-submenu">
-            <button class="submenu-toggle" type="button" aria-expanded="false">Services</button>
+            <div class="submenu-head">
+              <a href="services/" class="submenu-link">Services</a>
+              <button class="submenu-toggle" type="button" aria-expanded="false" aria-label="Services submenu"></button>
+            </div>
             <ul class="submenu">
-              <li><a href="#services">Pipe Fabrication</a></li>
-              <li><a href="#services">Industrial Construction</a></li>
-              <li><a href="#services">Maintenance</a></li>
-              <li><a href="#services">Engineering</a></li>
-              <li><a href="#services">Electrical</a></li>
-              <li><a href="#services">Technical Solutions</a></li>
+              <li><a href="services/#pipe-fabrication">Pipe Fabrication</a></li>
+              <li><a href="services/#industrial-construction">Industrial Construction</a></li>
+              <li><a href="services/#maintenance">Maintenance</a></li>
+              <li><a href="services/#engineering">Engineering</a></li>
+              <li><a href="services/#electrical">Electrical</a></li>
+              <li><a href="services/#technical-solutions">Technical Solutions</a></li>
             </ul>
           </li>
-          <li><a href="#industries">Industries</a></li>
-          <li><a href="#safety">Safety</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#news">News</a></li>
-          <li><a href="#careers">Careers</a></li>
-          <li class="primary-nav__cta"><a href="#contact" class="btn btn--primary">Get a Quote</a></li>
+          <li><a href="industries/">Industries</a></li>
+          <li><a href="safety/">Safety</a></li>
+          <li><a href="projects/">Projects</a></li>
+          <li><a href="news/">News</a></li>
+          <li><a href="careers/">Careers</a></li>
+          <li class="primary-nav__cta"><a href="contact/" class="btn btn--primary">Get a Quote</a></li>
         </ul>
       </nav>
     </div>
@@ -65,8 +71,8 @@
           <h1>Lorem ipsum dolor sit amet consectetur</h1>
           <p class="lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
           <div class="btn-group">
-            <a href="#contact" class="btn btn--primary">Get a Quote</a>
-            <a href="#services" class="btn btn--outline">Our Services</a>
+            <a href="contact/" class="btn btn--primary">Get a Quote</a>
+            <a href="services/" class="btn btn--outline">Our Services</a>
           </div>
         </div>
         <img class="hero__media" src="img/profitt.jpeg" alt="PRO-FITT facility and team">
@@ -98,37 +104,37 @@
             <div class="placeholder placeholder--icon" aria-hidden="true"></div>
             <h3>Lorem ipsum</h3>
             <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur.</p>
-            <a href="#" class="link-arrow">Learn more</a>
+            <a href="services/#pipe-fabrication" class="link-arrow">Learn more</a>
           </article>
           <article class="card">
             <div class="placeholder placeholder--icon" aria-hidden="true"></div>
             <h3>Dolor sit amet</h3>
             <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam.</p>
-            <a href="#" class="link-arrow">Learn more</a>
+            <a href="services/#industrial-construction" class="link-arrow">Learn more</a>
           </article>
           <article class="card">
             <div class="placeholder placeholder--icon" aria-hidden="true"></div>
             <h3>Consectetur</h3>
             <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.</p>
-            <a href="#" class="link-arrow">Learn more</a>
+            <a href="services/#maintenance" class="link-arrow">Learn more</a>
           </article>
           <article class="card">
             <div class="placeholder placeholder--icon" aria-hidden="true"></div>
             <h3>Adipiscing elit</h3>
             <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil.</p>
-            <a href="#" class="link-arrow">Learn more</a>
+            <a href="services/#engineering" class="link-arrow">Learn more</a>
           </article>
           <article class="card">
             <div class="placeholder placeholder--icon" aria-hidden="true"></div>
             <h3>Sed do eiusmod</h3>
             <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus.</p>
-            <a href="#" class="link-arrow">Learn more</a>
+            <a href="services/#electrical" class="link-arrow">Learn more</a>
           </article>
           <article class="card">
             <div class="placeholder placeholder--icon" aria-hidden="true"></div>
             <h3>Tempor incididunt</h3>
             <p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis.</p>
-            <a href="#" class="link-arrow">Learn more</a>
+            <a href="services/#technical-solutions" class="link-arrow">Learn more</a>
           </article>
         </div>
       </div>
@@ -149,7 +155,7 @@
             <li><strong>Dolor sit.</strong> Nemo enim ipsam voluptatem quia voluptas sit.</li>
             <li><strong>Amet elit.</strong> Aspernatur aut odit aut fugit, sed quia consequuntur.</li>
           </ul>
-          <a href="#" class="btn btn--outline">About Us</a>
+          <a href="about/" class="btn btn--outline">About Us</a>
         </div>
       </div>
     </section>
@@ -257,7 +263,7 @@
             <p class="eyebrow">News</p>
             <h2>Lorem ipsum dolor</h2>
           </div>
-          <a href="#" class="link-arrow">View all</a>
+          <a href="news/" class="link-arrow">View all</a>
         </header>
         <div class="grid grid--3">
           <article class="card card--media">
@@ -285,7 +291,7 @@
           <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
         </div>
         <div class="btn-group">
-          <a href="#" class="btn btn--primary">View Openings</a>
+          <a href="careers/#openings" class="btn btn--primary">View Openings</a>
           <a href="#" class="btn btn--outline">Benefits</a>
         </div>
       </div>
@@ -364,7 +370,7 @@
   <footer class="site-footer" data-label="Footer">
     <div class="container footer-grid">
       <div class="footer-col footer-col--brand">
-        <a href="#" class="logo" aria-label="Home">
+        <a href="./" class="logo" aria-label="Home">
           <img src="img/profitt.jpeg" alt="PRO-FITT logo" class="logo__mark logo__image">
         </a>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
@@ -377,13 +383,13 @@
       <nav class="footer-col" aria-label="Company">
         <h4 class="footer-col__title"><button type="button" class="footer-toggle" aria-expanded="false">Company</button></h4>
         <ul class="footer-col__links">
-          <li><a href="#about">About</a></li><li><a href="#about">History</a></li><li><a href="#about">Leadership</a></li><li><a href="#careers">Careers</a></li>
+          <li><a href="about/">About</a></li><li><a href="about/#history">History</a></li><li><a href="about/#leadership">Leadership</a></li><li><a href="careers/">Careers</a></li>
         </ul>
       </nav>
       <nav class="footer-col" aria-label="Services">
         <h4 class="footer-col__title"><button type="button" class="footer-toggle" aria-expanded="false">Services</button></h4>
         <ul class="footer-col__links">
-          <li><a href="#services">Lorem ipsum</a></li><li><a href="#services">Dolor sit</a></li><li><a href="#services">Amet elit</a></li><li><a href="#services">Consectetur</a></li>
+          <li><a href="services/#pipe-fabrication">Lorem ipsum</a></li><li><a href="services/#industrial-construction">Dolor sit</a></li><li><a href="services/#maintenance">Amet elit</a></li><li><a href="services/#engineering">Consectetur</a></li>
         </ul>
       </nav>
       <div class="footer-col">
