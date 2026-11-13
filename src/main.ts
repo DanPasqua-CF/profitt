@@ -226,7 +226,7 @@ function initContactForm(): void {
 }
 
 /* ------------------------------------------------------------------
- * Wireframe helpers: back-to-top, section labels, footer year
+ * Helpers: back-to-top button, footer year
  * ------------------------------------------------------------------ */
 function initHelpers(): void {
   const backToTop = $<HTMLButtonElement>(".back-to-top");
@@ -240,12 +240,6 @@ function initHelpers(): void {
     );
     update();
   }
-
-  const annotate = $<HTMLButtonElement>(".annotate-toggle");
-  annotate?.addEventListener("click", () => {
-    const on = document.body.classList.toggle("show-labels");
-    annotate.setAttribute("aria-pressed", String(on));
-  });
 
   const year = $<HTMLElement>("#year");
   if (year) year.textContent = String(new Date().getFullYear());

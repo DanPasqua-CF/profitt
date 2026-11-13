@@ -33,7 +33,7 @@ The header and footer are duplicated in each HTML file — update menu changes i
   `#electrical`, `#technical-solutions`
 
 ## Home page sections (top to bottom)
-Utility bar (phone/email/social) · Sticky header with dropdown navigation + "Get a Quote" · Hero · Stats strip ·
+Sticky header with dropdown navigation + "Get a Quote" · Hero · Stats strip ·
 Services grid · Why us / About · Industries served · Safety · Projects (filterable) · Certifications / affiliations ·
 News · Careers call-to-action · Contact form + locations/map · Footer (links, social, legal).
 
@@ -42,7 +42,7 @@ News · Careers call-to-action · Contact form + locations/map · Footer (links,
 |---|---|
 | < 480px | Single column, stacked full-width buttons, hamburger menu (slide-in drawer), footer accordions |
 | ≥ 480px | Buttons side-by-side, 2-column form rows, 3-up tiles and logos |
-| ≥ 768px | Full utility bar, 4-up stats, 2-column cards, side-by-side careers banner, footer columns open |
+| ≥ 768px | 4-up stats, 2-column cards, side-by-side careers banner, footer columns open |
 | ≥ 1024px | Desktop navigation with dropdowns, 3-column cards, 2-column split sections, 6-up tiles/logos |
 | ≥ 1280px | Extra section spacing for wide screens |
 
@@ -54,7 +54,7 @@ News · Careers call-to-action · Contact form + locations/map · Footer (links,
 - Project filter chips
 - Animated stat counters (skipped when the user prefers reduced motion)
 - Contact form validation with inline, screen-reader-announced errors (no data is sent)
-- Back-to-top button and a **Labels** toggle that outlines and names each wireframe section
+- Back-to-top button
 
 ## Accessibility
 Skip link, semantic landmarks, `aria-expanded`/`aria-pressed` states, 44px minimum touch targets, visible focus

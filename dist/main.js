@@ -202,7 +202,7 @@ function initContactForm() {
     });
 }
 /* ------------------------------------------------------------------
- * Wireframe helpers: back-to-top, section labels, footer year
+ * Helpers: back-to-top button, footer year
  * ------------------------------------------------------------------ */
 function initHelpers() {
     const backToTop = $(".back-to-top");
@@ -214,11 +214,6 @@ function initHelpers() {
         backToTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: REDUCED_MOTION.matches ? "auto" : "smooth" }));
         update();
     }
-    const annotate = $(".annotate-toggle");
-    annotate?.addEventListener("click", () => {
-        const on = document.body.classList.toggle("show-labels");
-        annotate.setAttribute("aria-pressed", String(on));
-    });
     const year = $("#year");
     if (year)
         year.textContent = String(new Date().getFullYear());
